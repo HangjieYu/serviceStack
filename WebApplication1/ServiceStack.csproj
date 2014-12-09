@@ -1,0 +1,323 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{12D1178B-AA24-44C7-9C17-40C597C4EF1A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebApplication1</RootNamespace>
+    <AssemblyName>WebApplication1</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CCPRestSDK, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\CCPRestSDK.dll</HintPath>
+    </Reference>
+    <Reference Include="Commons, Version=0.4.2.8580, Culture=neutral, PublicKeyToken=44382d1b57473eda">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\Commons.dll</HintPath>
+    </Reference>
+    <Reference Include="EasyNet.Solr, Version=3.5.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\EasyNet.Solr.dll</HintPath>
+    </Reference>
+    <Reference Include="Gearman.net, Version=1.0.4919.19839, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\Gearman.net.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.84.0.0, Culture=neutral, PublicKeyToken=1b03e6acf1164f73">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Intelligencia.UrlRewriter, Version=1.7.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\Intelligencia.UrlRewriter.dll</HintPath>
+    </Reference>
+    <Reference Include="JdSoft.Apns.Notifications, Version=1.0.4.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\JdSoft.Apns.Notifications.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="MD.Business, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\MD.Business.dll</HintPath>
+    </Reference>
+    <Reference Include="MD.DAL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\MD.DAL.dll</HintPath>
+    </Reference>
+    <Reference Include="MD.DBRouting, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\MD.DBRouting.dll</HintPath>
+    </Reference>
+    <Reference Include="MD.DCService, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\MD.DCService.dll</HintPath>
+    </Reference>
+    <Reference Include="MD.EmailService, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\MD.EmailService.dll</HintPath>
+    </Reference>
+    <Reference Include="MD.EmailThreading, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\MD.EmailThreading.dll</HintPath>
+    </Reference>
+    <Reference Include="MD.Entity, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\MD.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="MD.Enum, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\MD.Enum.dll</HintPath>
+    </Reference>
+    <Reference Include="MD.Framework, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\MD.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="MD.Memcached, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\MD.Memcached.dll</HintPath>
+    </Reference>
+    <Reference Include="MD.MQ.NetRabbitClient, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\MD.MQ.NetRabbitClient.dll</HintPath>
+    </Reference>
+    <Reference Include="MD.NotificationPush, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\MD.NotificationPush.dll</HintPath>
+    </Reference>
+    <Reference Include="MD.Qiniu, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\MD.Qiniu.dll</HintPath>
+    </Reference>
+    <Reference Include="MD.Search.Solr, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\MD.Search.Solr.dll</HintPath>
+    </Reference>
+    <Reference Include="MD.SmsSender, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\MD.SmsSender.dll</HintPath>
+    </Reference>
+    <Reference Include="MD.Threading, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\MD.Threading.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json.Compact, Version=3.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\Newtonsoft.Json.Compact.dll</HintPath>
+    </Reference>
+    <Reference Include="Novell.Directory.Ldap, Version=2.1.8.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\Novell.Directory.Ldap.dll</HintPath>
+    </Reference>
+    <Reference Include="RabbitMQ.Client, Version=3.2.4.0, Culture=neutral, PublicKeyToken=89e7d7c5feba84ce, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\RabbitMQ.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack">
+      <HintPath>..\packages\ServiceStack.4.0.31\lib\net40\ServiceStack.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Client">
+      <HintPath>..\packages\ServiceStack.Client.4.0.31\lib\net40\ServiceStack.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Common">
+      <HintPath>..\packages\ServiceStack.Common.4.0.31\lib\net40\ServiceStack.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Interfaces">
+      <HintPath>..\packages\ServiceStack.Interfaces.4.0.31\lib\portable-wp80+sl5+net40+win8+monotouch+monoandroid\ServiceStack.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.OrmLite">
+      <HintPath>..\packages\ServiceStack.OrmLite.4.0.31\lib\net40\ServiceStack.OrmLite.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.OrmLite.SqlServer">
+      <HintPath>..\packages\ServiceStack.OrmLite.SqlServer.4.0.31\lib\net40\ServiceStack.OrmLite.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Redis">
+      <HintPath>..\packages\ServiceStack.Redis.4.0.31\lib\net40\ServiceStack.Redis.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Server">
+      <HintPath>..\packages\ServiceStack.Server.4.0.31\lib\net40\ServiceStack.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Text">
+      <HintPath>..\packages\ServiceStack.Text.4.0.31\lib\net40\ServiceStack.Text.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="WebActivator">
+      <HintPath>..\packages\WebActivator.1.5\lib\net40\WebActivator.dll</HintPath>
+    </Reference>
+    <Reference Include="xunit, Version=1.8.0.1545, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\xunit.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="default.htm" />
+    <Content Include="dll\CCPRestSDK.dll" />
+    <Content Include="dll\Commons.dll" />
+    <Content Include="dll\EasyNet.Solr.dll" />
+    <Content Include="dll\Gearman.net.dll" />
+    <Content Include="dll\ICSharpCode.SharpZipLib.dll" />
+    <Content Include="dll\Intelligencia.UrlRewriter.dll" />
+    <Content Include="dll\JdSoft.Apns.Notifications.dll" />
+    <Content Include="dll\log4net.dll" />
+    <Content Include="dll\MD.Business.dll" />
+    <Content Include="dll\MD.Business.pdb" />
+    <Content Include="dll\MD.DAL.dll" />
+    <Content Include="dll\MD.DAL.pdb" />
+    <Content Include="dll\MD.DBRouting.dll" />
+    <Content Include="dll\MD.DBRouting.pdb" />
+    <Content Include="dll\MD.DCService.dll" />
+    <Content Include="dll\MD.DCService.pdb" />
+    <Content Include="dll\MD.EmailService.dll" />
+    <Content Include="dll\MD.EmailService.pdb" />
+    <Content Include="dll\MD.EmailThreading.dll" />
+    <Content Include="dll\MD.EmailThreading.pdb" />
+    <Content Include="dll\MD.Entity.dll" />
+    <Content Include="dll\MD.Entity.pdb" />
+    <Content Include="dll\MD.Enum.dll" />
+    <Content Include="dll\MD.Enum.pdb" />
+    <Content Include="dll\MD.Framework.dll" />
+    <Content Include="dll\MD.Framework.pdb" />
+    <Content Include="dll\MD.Memcached.dll" />
+    <Content Include="dll\MD.Memcached.pdb" />
+    <Content Include="dll\MD.MQ.NetRabbitClient.dll" />
+    <Content Include="dll\MD.MQ.NetRabbitClient.pdb" />
+    <Content Include="dll\MD.NotificationPush.dll" />
+    <Content Include="dll\MD.NotificationPush.pdb" />
+    <Content Include="dll\MD.Qiniu.dll" />
+    <Content Include="dll\MD.Search.Solr.dll" />
+    <Content Include="dll\MD.Search.Solr.pdb" />
+    <Content Include="dll\MD.SmsSender.dll" />
+    <Content Include="dll\MD.SmsSender.pdb" />
+    <Content Include="dll\MD.Threading.dll" />
+    <Content Include="dll\MD.Threading.pdb" />
+    <Content Include="dll\Newtonsoft.Json.Compact.dll" />
+    <Content Include="dll\Newtonsoft.Json.dll" />
+    <Content Include="dll\Novell.Directory.Ldap.dll" />
+    <Content Include="dll\RabbitMQ.Client.dll" />
+    <Content Include="dll\xunit.dll" />
+    <Content Include="dll\副本 CCPRestSDK.dll" />
+    <Content Include="dll\副本 Commons.dll" />
+    <Content Include="dll\副本 EasyNet.Solr.dll" />
+    <Content Include="dll\副本 MD.DBRouting.pdb" />
+    <Content Include="Global.asax" />
+    <Content Include="jqunback-1.51.min.js" />
+    <Content Include="README.txt" />
+    <Content Include="test.html" />
+    <Content Include="testuser.html" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\AppHost.cs" />
+    <Compile Include="App_Start\Function.cs" />
+    <Compile Include="App_Start\Group.cs" />
+    <Compile Include="App_Start\Post.cs" />
+    <Compile Include="App_Start\User.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <Content Include="dll\Intelligencia.UrlRewriter.dll.refresh" />
+    <Content Include="dll\MD.Qiniu.dll.refresh" />
+    <Content Include="dll\副本 Intelligencia.UrlRewriter.dll.refresh" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:8603/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
